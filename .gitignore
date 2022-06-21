@@ -1,0 +1,5 @@
+/vincit/
+epoch_conv.py
+json_parsing.py
+*.json
+*.DS_Store
