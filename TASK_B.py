@@ -1,7 +1,7 @@
 from datetime import datetime
 
 def get_trading_vol_data(dataset, diff:int) -> list:
-# Make list of just prices depending on data provided by Coingecko API
+# Make list of just dates and volumes depending on data provided by Coingecko API
 
     data = dataset['total_volumes']
     volumes_list = []
@@ -22,13 +22,13 @@ def get_trading_vol_data(dataset, diff:int) -> list:
             time = time.strftime('%d.%m.%Y')
             volume = float(data[i][1])
             volumes_list.append([time,volume])
-
+    
     return volumes_list
 
 
 
 def highest_vol(volumes:list) -> None:
-# Calculate if today's price is smaller than yesterday's
+# Iterate through list to find day with highest volume
     
     max_vol = float(0)
 
@@ -38,6 +38,6 @@ def highest_vol(volumes:list) -> None:
             max_vol = vol
             max_vol_date = volumes[i][0]
 
-    print(f'Maximum trading volume {max_vol:,.2f}€ was in {max_vol_date}')
+    print(f'Maximum trading volume {max_vol:,.0f}€ was in {max_vol_date}')
 
     
