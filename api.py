@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-import requests
 
 app = FastAPI()
 
@@ -9,11 +8,11 @@ def downtrend():
     pass
 
 @app.get("/max-vol")
-def downtrend():
+def max_vol():
     pass
 
 @app.get("/best-days")
-def downtrend():
+def best_days():
     pass
 
 

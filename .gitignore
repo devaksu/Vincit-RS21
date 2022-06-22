@@ -1,5 +1,8 @@
 /vincit/
+/env/
 epoch_conv.py
 json_parsing.py
 *.json
 *.DS_Store
+/__pycache__
+help.py

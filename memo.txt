@@ -1,0 +1,2 @@
+Win ENV: source env/bin/activate
+Mac Env: source vincit/bin/activate
