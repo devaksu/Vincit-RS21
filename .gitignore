@@ -1,8 +1,12 @@
+# Directories
 /vincit/
 /env/
-epoch_conv.py
-json_parsing.py
+/__pycache__
+
+# File types
+*.pdf
 *.json
 *.DS_Store
-/__pycache__
+
+# Exact files
 help.py

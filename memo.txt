@@ -1,2 +1,2 @@
-Win ENV: source env/bin/activate
+Win ENV: source env/Scripts/activate
 Mac Env: source vincit/bin/activate
