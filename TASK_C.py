@@ -1,6 +1,6 @@
 from datetime import datetime
 
-def clean_price_data(dataset:list, diff:int) -> list:
+def clean_price_data(dataset:list[str,float], diff:int) -> list[str,float]:
 # Make list of times and prices depending on data provided by Coingecko API
 
     data = dataset['prices']
@@ -21,7 +21,7 @@ def clean_price_data(dataset:list, diff:int) -> list:
     return clean_list
 
 
-def best_case(data:list) -> None:
+def best_case(data:list[str, float]) -> None:
 # Look for best profit (sell price - buy price)
     max_profit = 0
 

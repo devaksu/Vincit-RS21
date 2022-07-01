@@ -1,11 +1,10 @@
 from TASK_A import get_price_data, longest_downtrend
 from TASK_B import get_trading_vol_data, highest_vol
 from TASK_C import best_case, clean_price_data
-from datetime import datetime
-from typing import Tuple
+from datetime import datetime,timedelta
 import requests
 
-def get_starting_day() -> Tuple[datetime, int]:
+def get_starting_day() -> tuple[datetime, int]:
 # Format user inputted starting day to datetime and epoch
     
     starting = input(str('Please enter starting day as DD.MM.YYYY: '))
@@ -15,7 +14,7 @@ def get_starting_day() -> Tuple[datetime, int]:
     return start_dt, start_epoch
 
 
-def get_ending_day() -> Tuple[datetime, int]:
+def get_ending_day() -> tuple[datetime, int]:
 # Format user inputted ending day to datetime and epoch
 
     ending = input(str('Please enter ending day as DD.MM.YYYY: '))
@@ -29,8 +28,10 @@ def date_diff(start:datetime, end:datetime) -> int:
 # Calculate difference between start and end for API's behaviour
 
     d_diff = end - start
-
-    return d_diff.days
+    if d_diff > timedelta(days=0):
+        return d_diff.days
+    else:
+        raise ValueError("Give proper dates")
 
 
 def main() -> None:

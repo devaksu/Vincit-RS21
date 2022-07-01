@@ -1,6 +1,6 @@
 from datetime import datetime
 
-def get_price_data(dataset:list, diff:int) -> list:
+def get_price_data(dataset:list, diff:int) -> list[float]:
 # Make list of just prices depending on data provided by Coingecko API
 
     data = dataset['prices']
@@ -17,7 +17,7 @@ def get_price_data(dataset:list, diff:int) -> list:
         for i in range(len(data)):
             price = float(data[i][1])
             prices_list.append(price)
-
+            
     return prices_list
 
 
