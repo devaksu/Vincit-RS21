@@ -21,7 +21,7 @@ def get_price_data(dataset:list, diff:int) -> list[float]:
     return prices_list
 
 
-def longest_downtrend(prices:list) -> None:
+def longest_downtrend(prices:list[float]) -> None:
 # Calculate if today's price is smaller than yesterday's
     
     current_streak = 0
@@ -39,4 +39,4 @@ def longest_downtrend(prices:list) -> None:
 
         yesterday = price                       # Finally set today's price as a yesterday's value for next iteration
 
-    print(f'Longest downtrend: {max_streak}')
+    print(f'Longest downtrend: {max_streak}\n')

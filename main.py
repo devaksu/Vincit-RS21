@@ -43,15 +43,15 @@ def main() -> None:
     api_address = f'https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from={start_epoch}&to={end_epoch}'
     data = requests.get(f'{api_address}').json()
   
-    # TASK A
+    # TASK A Get longest downtrend
     price_data = get_price_data(data, difference)
     longest_downtrend(price_data)
 
-    # TASK B
+    # TASK B get maximum trading volume in euro
     vol_data = get_trading_vol_data(data, difference)
     highest_vol(vol_data)
 
-    # TASK C
+    # TASK C get best dates to buy and sell bitcoin
     clean_data = clean_price_data(data, difference)
     best_case(clean_data) 
 

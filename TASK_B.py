@@ -37,6 +37,6 @@ def highest_vol(volumes:list[str,float]) -> None:
             max_vol = vol
             max_vol_date = volumes[i][0]
 
-    print(f'Maximum trading volume {max_vol:,.0f}€ was in {max_vol_date}')
+    print(f'Maximum trading volume {max_vol:,.0f}€ was in {max_vol_date}\n')
 
     
