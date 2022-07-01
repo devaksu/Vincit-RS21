@@ -41,7 +41,7 @@ def best_case(data:list) -> None:
                 sell_date = end_date
                 sell_price = end_price
 
-    if buy_date < sell_date:
+    if max_profit > 0:
         print(f'Buy {buy_date:%d.%m.%Y} at {buy_price:.2f} and sell {sell_date:%d.%m.%Y} at {sell_price:.2f} for {max_profit:.2f} euros profit')
 
     else:
